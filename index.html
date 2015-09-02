@@ -1,11 +1,19 @@
 <html>
-<head>
-  <title> Learning </title>
-</head>
+<head> <title>Testing service workers!!!</title> </head>
 <body>
-  <ol type="1">
-  <a href="#cachebusting"><li>How to perform static assets cache busting @ html runtime</li> </a>
-  <a id="cachebusting">cachebusting</a>
-</ol>
+<p> This is a page for testing service workers !!! </p>
+<!-- Registering service workers start-->
+<script type="text/javascript">
+	if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(function(registration) {
+    // Registration was successful
+    console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+  }).catch(function(err) {
+    // registration failed :(
+    console.log('ServiceWorker registration failed: ', err);
+  });
+}
+</script>
+<!-- Registering service workers end-->
 </body>
 </html>
