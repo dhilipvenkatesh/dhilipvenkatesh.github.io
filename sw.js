@@ -1,9 +1,7 @@
 var sw = "Service workers";
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
-  '/styles/main.css',
-  '/script/main.js'
+  'https://www.ostraining.com/cdn/images/coding/setting.png'
 ];
 
 self.addEventListener('install', function(event) {
