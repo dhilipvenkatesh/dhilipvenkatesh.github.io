@@ -1,32 +1,19 @@
 <html>
-<head> <title>Testing service workers!!!</title> </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Lonely Globe Advisor</title>
+</head>
 <body>
-
-<!-- Registering service workers start-->
-<script type="text/javascript">
-	if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').then(function(registration) {
-    // Registration was successful
-    console.log('ServiceWorker registration successful with scope: ',    registration.scope);
-  }).catch(function(err) {
-    // registration failed :(
-    console.log('ServiceWorker registration failed: ', err);
-  });
-}
-</script>
-<!-- Registering service workers end-->
-
-<table border="0" cellpadding="50">
-      <tr>
-        <td>
-          <img src="https://www.ostraining.com/cdn/images/coding/setting.png">
-        </td>
-        <td>
-          <h1>Sample Application Using Service Workers</h1>
-        </td>
-      </tr>
-</table>
-
-
+  <h1>Top Hotels in Rome</h1>
+  <ol>
+    <li>Villa Domus - Via Piacenza 9, Rome, Italy</li>
+    <li>Hotel Trivelli - Piazza Barberini 11, Rome, Italy</li>
+  </ol>
+  <script src="upup.min.js"></script>
+  <script>
+    UpUp.start({
+      'content': '<html><body><h1>Top Hotels in Rome</h1><p>Villa Domus</p><p>Hotel Trivelli</p></body></html>'
+    });
+  </script>
 </body>
 </html>
